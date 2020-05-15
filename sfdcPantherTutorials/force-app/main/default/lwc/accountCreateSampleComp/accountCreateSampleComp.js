@@ -2,12 +2,13 @@ import { LightningElement } from 'lwc';
 import Account_Name from '@salesforce/schema/Account.Name';
 import Account_Type from '@salesforce/schema/Account.Type';
 import Account_Industry from '@salesforce/schema/Account.Industry';
+import Account_Rating from '@salesforce/schema/Account.Rating';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { NavigationMixin } from 'lightning/navigation';
 
 export default class AccountCreateSampleComp extends NavigationMixin(LightningElement) {
     objectApiName = 'Account';
-    fieldList = [Account_Name, Account_Type, Account_Industry];
+    fieldList = [Account_Name, Account_Type, Account_Industry,Account_Rating];
     handleAccountCreate(event){
         const evt = new ShowToastEvent({
             title : "Account Created",
