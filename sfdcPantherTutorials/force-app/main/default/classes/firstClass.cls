@@ -17,4 +17,8 @@ public with sharing class firstClass {
          newMap.put('Sabitri', 53);
          return newMap;
     }
+    @AuraEnabled
+    public static Integer getSumResult(Integer firstNumber, Integer secondNumber){
+        return (firstNumber+secondNumber);
+    }
 }
